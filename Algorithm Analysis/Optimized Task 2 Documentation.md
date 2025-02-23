@@ -1,64 +1,87 @@
-# Optimized Pairing Algorithm
+# Optimized Task 2 - Documentation
 
-## Introduction
+## Overview
 
-This project presents an optimized approach to finding number pairs that sum up to a given value. The traditional brute-force approach has a time complexity of **O(n²)**, but this method significantly improves it to **O(n log n)** using sorting, binary search, and efficient iteration.
+This script implements an optimized approach to find all unique pairs in an array whose sum equals a given target value. The solution utilizes **Quick Sort** for sorting and **Binary Search** for efficient lookups.
 
-## Approach
+## Features
 
-### Step 1: Sorting the Array
+- **Binary Search (O(log N))**: Efficiently searches for an element in a sorted array.
+- **Quick Sort (O(N log N))**: Sorts the array before searching for pairs.
+- **Pair Finding Algorithm (O(N log N))**: Uses binary search to efficiently locate required pairs.
+- **Overall Complexity: O(N log N)**
 
-The input array is first sorted using QuickSort or another efficient sorting algorithm. This step has a time complexity of **O(n log n)**.
+## Implementation Details
 
-**Example:**
+### 1. Binary Search
 
-```
-Input:  (7,10,8,4,1,2,0,9,20,30,50,100)
-Sorted: (0, 1, 2, 4, 7, 8, 9, 10, 20, 30, 50, 100)
-```
-
-### Step 2: Excluding Large Numbers
-
-If the target sum is **S**, all numbers greater than **S** can be excluded. We find the position using **binary search**, which runs in **O(log n)**.
-
-**Example (S = 10):**
-
-```
-Filtered: (0, 1, 2, 4, 7, 8, 9, 10)
+```python
+def Binary_Search(Array, Key):
 ```
 
-### Step 3: Finding Pairs Efficiently
+- Performs a binary search on a sorted array.
+- Returns the index of the key if found, else returns `-1`.
 
-Instead of using a nested loop (O(n²)), we iterate through the list and use **binary search** (O(log n)) to check if the required complement exists.
+### 2. Quick Sort
 
-**Example:**
-For `i = 0`, the required number is `S - 0 = 10`. We use binary search to check if `10` exists in the array.
+```python
+def Quick_Sort(start, end, Array):
+```
+
+- Sorts the array using the Quick Sort algorithm.
+- Utilizes a partitioning method for recursive sorting.
+
+### 3. Finding Pairs
+
+```python
+def Find_Pairs(Array, Target_Sum):
+```
+
+- Sorts the array using **Quick Sort**.
+- Uses **Binary Search** to efficiently find the required complementary values.
+- Ensures pairs are unique by checking existing solutions.
+
+## How It Works
+
+1. The input array is sorted using Quick Sort.
+2. The highest valid index (<= Target Sum) is determined using Binary Search.
+3. The array is truncated to ignore unnecessary elements.
+4. The script iterates through the array, calculating the required pair value.
+5. Binary search is used to check if the required pair exists.
+6. The found pairs are stored and displayed.
+
+## Example Execution
+
+### Input:
+
+```python
+Array = [10,2,6,7,1,0,3,5,4,8,9]
+Target_Sum = 10
+Find_Pairs(Array, Target_Sum)
+```
+
+### Output:
+
+```plaintext
+[2, 8]
+[3, 7]
+[4, 6]
+[0, 10]
+[1, 9]
+```
 
 ## Complexity Analysis
 
-### **Brute-Force Approach:**
-
-- **O(n²)** due to nested loops.
-
-### **Optimized Approach:**
-
-1. Sorting: **O(n log n)**
-2. Binary Search for slicing: **O(log n)**
-3. Finding pairs with binary search: **O(n log n)**
-
-**Total Complexity:**
-
-```
-O(n log n) + O(log n) + O(n log n) = O(n log n)
-```
-
-## Notes
-
-- This solution was developed entirely without external research or AI assistance.
+| Function               | Complexity     |
+| ---------------------- | -------------- |
+| Quick Sort             | O(N log N)     |
+| Binary Search          | O(log N)       |
+| Pair Finding           | O(N log N)     |
+| **Overall Complexity** | **O(N log N)** |
 
 ## Author
 
-Ahmed Wesam Ghaith
+Ahmed Ghaith
 
 ## Contact
 
