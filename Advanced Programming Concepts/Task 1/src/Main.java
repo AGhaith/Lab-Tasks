@@ -1,21 +1,27 @@
+
+// // Advanced Programming Concepts Lab 2 Task 1 Main
+// Import Scanner To Read Input
 import java.util.Scanner;
+
+// Create Main Class
 public class Main {
+    // Main Function
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
-        int x = input.nextInt(), y = input.nextInt();
-        int z = x+y;
-        int z2= x-y;
-        int z3 = x*y;
-        System.out.println("Sum = "+z);
-        System.out.println("Difference = "+z2);
-        System.out.println("Product = "+z3 );
-
-        Rectangle myrect = new Rectangle();
-        float length=input.nextFloat() , width=input.nextFloat();
-        myrect.setlength(length);
-        myrect.setwidth(width);
-        System.out.println("Area = "+myrect.getArea() + "Perimeter = " + myrect.getPerimeter());
-
+        // Initializations
+        // Taking Inputs For Calculation
+        System.out.println("Enter Two Numbers: ");
+        int FirstInput = input.nextInt(), SecondInput = input.nextInt();
+        // Implementing Calculations
+        int Addition = FirstInput + SecondInput;
+        int Subtraction = FirstInput - SecondInput;
+        int Multiplication = FirstInput * SecondInput;
+        // Outputting Calculations
+        System.out.println("Sum = " + Addition);
+        System.out.println("Difference = " + Subtraction);
+        System.out.println("Product = " + Multiplication);
+        // Closing Scanner
+        input.close();
     }
 }
+// Ahmed Ghaith
