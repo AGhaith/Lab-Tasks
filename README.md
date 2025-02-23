@@ -42,4 +42,8 @@ This repository is for educational purposes only. Refer to individual files for 
 
 ## Contact
 
-For any inquiries, contact [Ahmed Ghaith](https://github.com/AGhaith) Or Via [Email](A.wesam2300@nu.edu.eg).
+For any inquiries, contact [Ahmed Ghaith](https://github.com/AGhaith).
+
+## Email
+
+A.wesam2300@nu.edu.eg
