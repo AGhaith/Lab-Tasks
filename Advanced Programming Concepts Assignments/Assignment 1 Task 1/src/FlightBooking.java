@@ -1,6 +1,6 @@
 public class FlightBooking extends Booking {
-    String Flight_Number;
-    String Seat_Class;
+    private String Flight_Number;
+    private String Seat_Class;
 
     FlightBooking(String Customer_Name, String BookingDate, String Flight_Number, String Seat_Class) {
         super(Customer_Name, BookingDate);

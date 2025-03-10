@@ -1,9 +1,9 @@
 
 public class Booking {
-    static int Booking_Counters = 1;
-    final int BookingID = Booking_Counters++;
-    String Customer_Name;
-    String BookingDate;
+    private static int Booking_Counters = 1;
+    private final int BookingID = Booking_Counters++;
+    private String Customer_Name;
+    private String BookingDate;
 
     public int Get_BookingID() {
         return BookingID;

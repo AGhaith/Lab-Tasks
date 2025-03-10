@@ -1,6 +1,6 @@
 public class HotelBooking extends Booking {
-    String Hotel_Name;
-    String Room_Type;
+    private String Hotel_Name;
+    private String Room_Type;
 
     HotelBooking(String Customer_Name, String BookingDate, String Hotel_Name, String Room_Type) {
         super(Customer_Name, BookingDate);
